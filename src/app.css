@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Epilogue:wght@500;700&family=Inter:wght@400;600;700&family=Josefin+Sans:wght@100;300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@800&family=Poppins:wght@200;400;600&family=Roboto:wght@300;700&family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    --LightRed_work: hsl(15, 100%, 70%);
+    --SoftBlue_play: hsl(195, 74%, 62%);
+    --LightRed_study: hsl(348, 100%, 68%);
+    --LimeGreen_exercise: hsl(145, 58%, 55%);
+    --Violet_social: hsl(264, 64%, 52%);
+    --SoftOrange_self-care: hsl(43, 84%, 65%);
+
+    --VeryDark_blue: hsl(226, 43%, 10%);
+    --DarkBlue: hsl(235, 46%, 20%);
+    --DesaturatedBlue: hsl(235, 45%, 61%);
+    --PaleBlue: hsl(236, 100%, 87%);
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--VeryDark_blue);
+}
+
+.container {
+    color: white;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 60px;
+    grid-template-areas:
+        "profile"
+        "work"
+        "play"
+        "study"
+        "exercise"
+        "social"
+        "self-care"
+    ;
+}
+
+.card {
+    background-color: var(--DarkBlue);
+    /* border: 1px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+    height: 120px;
+    width: 100%;
+    z-index: 200;
+}
+
+
+.work-folder,
+.play-folder,
+.study-folder,
+.exercise-folder,
+.social-folder,
+.selfCare-folder {
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+
+.work-folder .top-background {
+    background-color: var(--LightRed_work);
+    height: 100px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: -10;
+}
+
+.play-folder .top-background {
+    background-color: var(--SoftBlue_play);
+    height: 100px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: -10;
+}
+
+.study-folder .top-background {
+    background-color: var(--LightRed_study);
+    height: 100px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: -10;
+}
+
+.exercise-folder .top-background {
+    background-color: var(--LimeGreen_exercise);
+    height: 100px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: -10;
+}
+
+.social-folder .top-background {
+    background-color: var(--Violet_social);
+    height: 100px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: -10;
+}
+
+.selfCare-folder .top-background {
+    background-color: var(--SoftOrange_self-care);
+    height: 100px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: -10;
+}
+
+
+.activity-icon {
+    width: 60px;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+}
+
+.profile-folder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 10px;
+    background-color: var(--DesaturatedBlue);
+    border-radius: 15px;
+
+}
+
+.profil-header {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.profil-header span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: var(--PaleBlue);
+    font-size: 15px;
+}
+
+.profil-header .name {
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.time {
+    text-align: right;
+}
+
+.time img {
+    margin-bottom: 10px;
+}
+
+.hours {
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: 5px;
+}
+
+.activity h2 {
+    margin-bottom: 20px;
+}
+
+.period {
+    color: var(--PaleBlue);
+    font-size: 12px;
+}
+
+.headshot {
+    width: 90px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 20px;
+}
+
+
+
+
+*/
+/* 
+.work-card::before {
+    content: "";
+    background-color: red;
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    border-radius: 15px;
+} */
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
