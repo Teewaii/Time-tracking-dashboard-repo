@@ -107,21 +107,26 @@
 //   const obj = JSON.parse(myData);
 const activity = document.querySelectorAll('.act');
 
+
+
 fetch("./src/data.json")
 
 .then(res=>res.json())
 .then(data=>{
-    activity.forEach(acti=>{
-    data.forEach(dat=>{
-        
-            acti.innerText = dat.title
-            // console.log(dat.title)
+    for(i=0; i<=data.length; i++){ 
+    activity.forEach(acti=>{          
+            acti.innerText = data[i].title
+            console.log(data[i].title)
     })
+    }
+})
+
+}
         // activity.forEach(acti=>{
         // acti.innerText = data[1].title
         //  console.log(data[i].title)
-        })
-   })
+       
+
 
  
 // activity.data
