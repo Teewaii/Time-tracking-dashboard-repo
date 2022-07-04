@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./src/app.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="profile-folder">
+            <div class="profile-header">
+                <img class="headshot" src="./images/image-jeremy.png" alt="jeremy-headshot">
+                <div class="header">
+                    <span>Report for</span>
+                    <p class="name">Jeremy Robson</p>
+                </div>
+                <!-- <div class="bottom-background"></div> -->
+            </div>
+            <div class="report-period card">
+                <p class="day">Daily</p>
+                <p class="week">Weekly</p>
+                <p class="month">Monthly </p>
+            </div>
+        </div>
+
+        <div class="work-folder">
+            <div class="work-card card">
+                <div class="activity">
+                    <p class="act"></p>
+                    <h2 class="hours">32hrs</h2>
+                </div>
+
+                <div class="time">
+                    <img src="./images/icon-ellipsis.svg">
+                    <p class="period">Last week - <span>36hrs</span></p>
+                </div>
+            </div>
+            <div class="top-background">
+                <img class="activity-icon" src="./images/icon-work.svg">
+            </div>
+        </div>
+
+        <div class="play-folder">
+            <div class="play-card card">
+                <div class="activity">
+                    <p class="act"></p>
+                    <h2 class="hours">10hrs</h2>
+                </div>
+                <div class="time">
+                    <img src="./images/icon-ellipsis.svg">
+                    <p class="period">Last week - <span>8hrs</span></p>
+                </div>
+            </div>
+            <div class="top-background">
+                <img class="activity-icon" src="./images/icon-play.svg">
+            </div>
+        </div>
+
+        <div class="study-folder">
+            <div class="study-card card">
+                <div class="activity">
+                    <p class="act"></p>
+                    <h2 class="hours">4hrs</h2>
+                </div>
+
+                <div class="time">
+                    <img src="./images/icon-ellipsis.svg">
+                    <p class="period">Last week - <span>7hrs</span></p>
+                </div>
+            </div>
+            <div class="top-background">
+                <img class="activity-icon" src="./images/icon-study.svg">
+            </div>
+        </div>
+
+        <div class="exercise-folder">
+            <div class="exercise-card card">
+                <div class="top-background">
+                    <img class="activity-icon" src="./images/icon-exercise.svg">
+                </div>
+                <div class="activity">
+                    <p class="act"></p>
+                    <h2 class="hours">4hrs</h2>
+                </div>
+
+                <div class="time">
+                    <img src="./images/icon-ellipsis.svg">
+                    <p class="period">Last week - <span>5hrs</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-folder">
+            <div class="social-card card">
+                <div class="top-background">
+                    <img class="activity-icon" src="./images/icon-social.svg">
+                </div>
+                <div class="activity">
+                    <p class="act"></p>
+                    <h2 class="hours">5hrs</h2>
+                </div>
+
+                <div class="time">
+                    <img src="./images/icon-ellipsis.svg">
+                    <p class="period">Last week - <span>10hrs</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="selfCare-folder">
+            <div class="selfCare-card card">
+                <div class="activity">
+                    <p class="act"></p>
+                    <h2 class="hours">2hrs</h2>
+                </div>
+
+                <div class="time">
+                    <img src="./images/icon-ellipsis.svg">
+                    <p class="period">Last week - <span>10hrs</span></p>
+                </div>
+            </div>
+            <div class="top-background">
+                <img class="activity-icon" src="./images/icon-self-care.svg">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Ajimati Taiye </a>.
+    </div>
+    <script src="./src/app.js"></script>
+</body>
+
+</html>
