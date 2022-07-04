@@ -106,12 +106,41 @@ let myData = [
 
 //   const obj = JSON.parse(myData);
 const activity = document.querySelectorAll('.act');
-
-// const timeFrame = document.querySelectorAll('.time-frame');
+// const timeFrame = document.querySelectorAll('.timeFrames');
+const day = document.querySelector('.day');
+const week = document.querySelector('.week');
+const month = document.querySelector('.month');
+const period = document.querySelectorAll('.period');
+const currentHours = document.querySelectorAll('.hours');
 
 
 for (i = 0; i < myData.length; i++) {
     activity[i].innerText = myData[i].title
-    // timeFrame[i].innerText = myData[i].title
-};
+    // currentHours[i].innerText = myData[i].timeframes.daily.current
+}
+
+day.addEventListener('click', function () {
+    for (i = 0; i < myData.length; i++) {
+        currentHours[i].innerText = myData[i].timeframes.daily.current + "hrs";
+        period[i].innerHTML = `<p class="period">Yesterday - ${myData[i].timeframes.daily.previous} ` + "hrs";
+
+    }
+})
+
+
+week.addEventListener('click', function () {
+    for (i = 0; i < myData.length; i++) {
+        currentHours[i].innerText = myData[i].timeframes.weekly.current + "hrs";
+        period[i].innerHTML = `<p class="period">Last week - ${myData[i].timeframes.weekly.previous} ` + "hrs";
+
+    }
+})
+
+month.addEventListener('click', function () {
+    for (i = 0; i < myData.length; i++) {
+        currentHours[i].innerText = myData[i].timeframes.monthly.current + "hrs";
+        period[i].innerHTML = `<p class="period">Last month - ${myData[i].timeframes.monthly.previous} ` + "hrs";
+
+    }
+})
 
