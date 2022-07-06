@@ -111,6 +111,7 @@ const day = document.querySelector('.day');
 const week = document.querySelector('.week');
 const month = document.querySelector('.month');
 const period = document.querySelectorAll('.period');
+const when = document.querySelectorAll('.when');
 const currentHours = document.querySelectorAll('.hours');
 
 
@@ -122,7 +123,7 @@ for (i = 0; i < myData.length; i++) {
 day.addEventListener('click', function () {
     for (i = 0; i < myData.length; i++) {
         currentHours[i].innerText = myData[i].timeframes.daily.current + "hrs";
-        period[i].innerHTML = `<p class="period">Yesterday - ${myData[i].timeframes.daily.previous} ` + "hrs";
+        period[i].innerText = `Yesterday - ${myData[i].timeframes.daily.previous} ` + "hrs";
 
     }
 })
@@ -131,7 +132,7 @@ day.addEventListener('click', function () {
 week.addEventListener('click', function () {
     for (i = 0; i < myData.length; i++) {
         currentHours[i].innerText = myData[i].timeframes.weekly.current + "hrs";
-        period[i].innerHTML = `<p class="period">Last week - ${myData[i].timeframes.weekly.previous} ` + "hrs";
+        period[i].innerText = `Last week - ${myData[i].timeframes.weekly.previous} `+"hrs";
 
     }
 })
@@ -139,8 +140,19 @@ week.addEventListener('click', function () {
 month.addEventListener('click', function () {
     for (i = 0; i < myData.length; i++) {
         currentHours[i].innerText = myData[i].timeframes.monthly.current + "hrs";
-        period[i].innerHTML = `<p class="period">Last month - ${myData[i].timeframes.monthly.previous} ` + "hrs";
+        period[i].innerText = `Last month - ${myData[i].timeframes.monthly.previous} ` + "hrs";
 
     }
 })
 
+
+when.forEach(btn => {
+    btn.addEventListener('click',activate)
+});
+
+function activate(e){
+    when.forEach(btn => {
+        btn.classList.remove('active');
+    });
+    e.target.classList.add('active')
+}

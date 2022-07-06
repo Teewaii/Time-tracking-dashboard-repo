@@ -47,16 +47,12 @@ body {
 
 .card {
   background-color: var(--DarkBlue);
-  /* border: 1px solid yellow; */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 15px;
+  height: 120px;
   border-radius: 15px;
-  height: 110px;
-  width: 100%;
-  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 20px;
 }
 
 .card p:nth-child(1) {
@@ -66,53 +62,11 @@ body {
 
 .card h2 {
   font-size: 2rem;
-  font-weight: 500;
 }
 
 .work-folder {
   grid-area: work;
 }
-
-.study-folder {
-  grid-area: study;
-}
-
-.play-folder {
-  grid-area: play;
-}
-
-.exercise-folder {
-  grid-area: exercise;
-}
-
-.selfCare-folder {
-  grid-area: self-care;
-}
-
-.profile-folder {
-  grid-area: profile;
-}
-
-.work-folder,
-.play-folder,
-.study-folder,
-.exercise-folder,
-.social-folder,
-.selfCare-folder,
-.profile-folder {
-  position: relative;
-  /* border: 1px solid red; */
-}
-
-.work-folder:hover,
-.play-folder:hover,
-.study-folder:hover,
-.exercise-folder:hover,
-.social-folder:hover,
-.selfCare-folder:hover {
-  opacity: 0.5;
-}
-
 .work-folder .activity {
   display: flex;
   height: 10px;
@@ -128,7 +82,55 @@ body {
   justify-content: space-between;
   width: 100%;
 }
+.work-folder .top-background {
+  background-color: var(--LightRed_work);
+  height: 100px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  z-index: -10;
+}
 
+.study-folder {
+  grid-area: study;
+}
+.study-folder .card {
+  display: flex;
+  flex-direction: column;
+}
+.study-folder .activity {
+  display: flex;
+  height: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.study-folder .time {
+  display: flex;
+  height: 10px;
+  padding: 2px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.study-folder .top-background {
+  background-color: var(--LightRed_study);
+  height: 100px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  z-index: -10;
+}
+
+.play-folder {
+  grid-area: play;
+}
 .play-folder .card {
   display: flex;
   flex-direction: column;
@@ -148,7 +150,21 @@ body {
   justify-content: space-between;
   width: 100%;
 }
+.play-folder .top-background {
+  background-color: var(--SoftBlue_play);
+  height: 100px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  z-index: -10;
+}
 
+.exercise-folder {
+  grid-area: exercise;
+}
 .exercise-folder .card {
   display: flex;
   flex-direction: column;
@@ -168,7 +184,55 @@ body {
   justify-content: space-between;
   width: 100%;
 }
+.exercise-folder .top-background {
+  background-color: var(--LimeGreen_exercise);
+  height: 100px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  z-index: -10;
+}
 
+.social-folder {
+  grid-area: social;
+}
+.social-folder .card {
+  display: flex;
+  flex-direction: column;
+}
+.social-folder .activity {
+  display: flex;
+  height: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.social-folder .time {
+  display: flex;
+  height: 10px;
+  padding: 2px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.social-folder .top-background {
+  background-color: var(--Violet_social);
+  height: 100px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  z-index: -10;
+}
+
+.selfCare-folder {
+  grid-area: self-care;
+}
 .selfCare-folder .card {
   display: flex;
   flex-direction: column;
@@ -188,67 +252,6 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-
-.work-folder .top-background {
-  background-color: var(--LightRed_work);
-  height: 100px;
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 15px;
-  z-index: -10;
-}
-
-.play-folder .top-background {
-  background-color: var(--SoftBlue_play);
-  height: 100px;
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 15px;
-  z-index: -10;
-}
-
-.study-folder .top-background {
-  background-color: var(--LightRed_study);
-  height: 100px;
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 15px;
-  z-index: -10;
-}
-
-.exercise-folder .top-background {
-  background-color: var(--LimeGreen_exercise);
-  height: 100px;
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 15px;
-  z-index: -10;
-}
-
-.social-folder .top-background {
-  background-color: var(--Violet_social);
-  height: 100px;
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 15px;
-  z-index: -10;
-}
-
 .selfCare-folder .top-background {
   background-color: var(--SoftOrange_self-care);
   height: 100px;
@@ -261,6 +264,67 @@ body {
   z-index: -10;
 }
 
+.profile-folder {
+  grid-area: profile;
+  display: flex;
+  flex-direction: column;
+}
+.profile-folder .profile-header span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: var(--PaleBlue);
+  font-size: 15px;
+}
+.profile-folder .profile-header .name {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.profile-folder .profile-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 25px 20px;
+  background-color: var(--Blue);
+  border-radius: 15px;
+  position: absolute;
+  top: -40px;
+  z-index: 200;
+}
+.profile-folder .day,
+.profile-folder .week,
+.profile-folder .month {
+  cursor: pointer;
+}
+.profile-folder .headshot {
+  width: 90px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 20px;
+}
+
+.work-folder,
+.play-folder,
+.study-folder,
+.exercise-folder,
+.social-folder,
+.selfCare-folder,
+.profile-folder {
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.work-folder .card:hover,
+.play-folder .card:hover,
+.study-folder .card:hover,
+.exercise-folder .card:hover,
+.social-folder .card:hover,
+.selfCare-folder .card:hover {
+  background-color: rgb(41, 46, 112);
+}
+
 .activity-icon {
   width: 60px;
   position: absolute;
@@ -268,45 +332,17 @@ body {
   right: 10px;
 }
 
-.profile-folder {
-  display: flex;
-  flex-direction: column;
-}
-
-.profile-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 25px 10px;
-  background-color: var(--DesaturatedBlue);
-  border-radius: 15px;
-  position: absolute;
-  top: -90px;
-  z-index: 200;
-}
-
 .report-period {
+  flex-direction: row;
   align-items: flex-end;
   z-index: 0;
   color: var(--PaleBlue);
+  height: 170px;
+  padding-bottom: 15px;
 }
 
-.report-period p:nth-child(2) {
+.active {
   color: white;
-}
-
-.profile-header span {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-  color: var(--PaleBlue);
-  font-size: 15px;
-}
-
-.profile-header .name {
-  font-size: 25px;
-  font-weight: lighter;
 }
 
 .time {
@@ -332,20 +368,6 @@ body {
   font-size: 12px;
 }
 
-.headshot {
-  width: 90px;
-  padding: 2px;
-  border-radius: 50%;
-  background-color: white;
-  margin-right: 40px;
-}
-
-.day,
-.week,
-.month {
-  cursor: pointer;
-}
-
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -356,55 +378,44 @@ body {
   text-decoration: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .container {
-    min-width: 800px;
-    border: 1px solid red;
+    max-width: 900px;
     height: 500px;
     margin: auto;
     margin-top: 8%;
-    margin-bottom: 60px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 120px 130px;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    grid-template-rows: 130px 130px;
     grid-row-gap: 55px;
-    grid-column-gap: 15px;
-    grid-template-areas: " profile work play study" "profile exercise social self-care";
+    grid-column-gap: 20px;
+    grid-template-areas: "profile work play study" "profile exercise social self-care";
   }
 
   .card {
     background-color: var(--DarkBlue);
-    border: 1px solid yellow;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     padding: 15px 15px;
     border-radius: 15px;
-    height: 115px;
+    height: 215px;
     width: 100%;
   }
 
   .period {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .profile-header {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-    height: 80%;
-    padding: 15px 0 15px 15px;
-    background-color: var(--DesaturatedBlue);
-    border-radius: 15px;
-    position: absolute;
-    top: -40px;
-    z-index: 200;
+    justify-content: flex-end;
+    margin-bottom: 50px;
   }
 
   .profile-header .name {
     margin-bottom: 20px;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 
   .report-period {
@@ -416,18 +427,18 @@ body {
     padding: 25px 10px;
     padding-left: 15px;
     z-index: 0;
-    height: 295px;
+    height: 310px;
     color: var(--PaleBlue);
     position: absolute;
   }
 
   .report-period p {
-    margin-bottom: 5px;
-    font-size: 10x;
+    margin-bottom: 10px;
+    font-size: 14px;
   }
 
   .report-period p:nth-child(3) {
-    margin-bottom: -5px;
+    margin: 0;
   }
 
   .headshot {
@@ -435,7 +446,7 @@ body {
     padding: 2px;
     border-radius: 50%;
     background-color: white;
-    margin-bottom: 20px;
+    margin: 15px 0;
   }
 
   .work-folder .card {
@@ -443,7 +454,6 @@ body {
     flex-direction: column;
     height: 125px;
     align-content: flex-end;
-    border: 1px solid green;
   }
   .work-folder .activity {
     display: flex;
@@ -456,16 +466,16 @@ body {
   .work-folder .time {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 90px;
-    width: 100%;
-    border: 1px solid pink;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .work-folder .hours {
+    margin-bottom: 5px;
   }
 
   .play-folder .card {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
     height: 125px;
     align-content: flex-end;
   }
@@ -480,16 +490,16 @@ body {
   .play-folder .time {
     display: flex;
     flex-direction: column;
-    height: 90px;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 20px;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .play-folder .hours {
+    margin-bottom: 5px;
   }
 
   .study-folder .card {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
     height: 125px;
     align-content: flex-end;
   }
@@ -504,16 +514,16 @@ body {
   .study-folder .time {
     display: flex;
     flex-direction: column;
-    height: 90px;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 20px;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .study-folder .hours {
+    margin-bottom: 5px;
   }
 
   .exercise-folder .card {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     height: 125px;
     align-content: flex-end;
   }
@@ -528,18 +538,18 @@ body {
   .exercise-folder .time {
     display: flex;
     flex-direction: column;
-    height: 90px;
-    justify-content: flex-start;
-    width: 100%;
-    border: 1px solid red;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .exercise-folder .hours {
+    margin-bottom: 5px;
   }
 
   .social-folder .card {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
     height: 125px;
-    align-content: flex-start;
+    align-content: flex-end;
   }
   .social-folder .activity {
     display: flex;
@@ -552,16 +562,16 @@ body {
   .social-folder .time {
     display: flex;
     flex-direction: column;
-    height: 90px;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 20px;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .social-folder .hours {
+    margin-bottom: 5px;
   }
 
   .selfCare-folder .card {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
     height: 125px;
     align-content: flex-end;
   }
@@ -576,9 +586,15 @@ body {
   .selfCare-folder .time {
     display: flex;
     flex-direction: column;
-    height: 90px;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 20px;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .selfCare-folder .hours {
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    transform: scale(1.2);
   }
 }/*# sourceMappingURL=app.css.map */
