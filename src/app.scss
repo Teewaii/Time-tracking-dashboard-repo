@@ -403,7 +403,7 @@ body {
     max-width: 900px;
     height: 500px;
     margin: auto;
-    margin-top: 8%;
+    margin-top: 12%;
     grid-template-columns: 1.3fr 1fr 1fr 1fr;
     grid-template-rows: 130px 130px;
     grid-row-gap: 55px;
@@ -429,11 +429,13 @@ body {
   }
 
 
+
   .profile-header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 50px;
+    
   }
 
   // .profile-header {
@@ -451,7 +453,6 @@ body {
   // }
 
   .profile-header .name {
-    margin-bottom: 20px;
     font-size: 1.8rem;
   }
 
@@ -647,6 +648,6 @@ body {
 
 @media (min-width:1200px) {
   .container{
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
 }
